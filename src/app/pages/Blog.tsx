@@ -40,7 +40,7 @@ export function Blog() {
     try {
       // Try Firebase if configured, otherwise simulate success
       try {
-        const mod = await import("../../lib/guardianServices");
+        const mod = await import("@/lib/guardianServices");
         await mod.submitWaitlist({ email: trimmed, source: "blog-newsletter" });
       } catch {
         await new Promise((r) => setTimeout(r, 700));
